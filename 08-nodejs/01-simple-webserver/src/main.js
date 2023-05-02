@@ -12,7 +12,13 @@ webServer.get("/admin", (request, response) => {
 });
 
 webServer.get("/user", (request, response) => {
+  const object = {
+    name: "view",
+    age: 23,
+  }
+  response.send(object)
   response.send("This is /user route");
+
 });
 
 webServer.listen(port, ipAddress, () => {
